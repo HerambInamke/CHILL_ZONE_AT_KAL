@@ -5,51 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalvium Chill Zone -_-</title>
     <style>
+        /* Updated background with pitch black and lighter orange gradient */
         body {
-            background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Darker gradient background */
-            color: #ECF0F1; /* Light text color */
+            background: linear-gradient(135deg, #000000, #FFB347); /* Black to lighter orange gradient */
+            color: #ECF0F1;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-        .logo {
-            position: absolute;
-            top: 10px; /* Move closer to the top */
-            left: 0px; /* Keep it to the left */
-            width: 100px; /* Smaller size */
-            height: auto;
-            z-index: 10; /* Ensure it appears above other content */
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
+        /* Logo styling */
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Main title styling */
         .main {
             font-size: 60px;
             font-weight: bolder;
             margin-top: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
-            transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s, transform 0.3s;
         }
 
         .main:hover {
-            color: #F39C12; /* Change color on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+            color: #F39C12;
+            transform: translateY(-2px);
         }
 
         .container {
-            margin: 20px; /* Space around each container */
+            margin: 20px;
         }
 
         .pic {
-            width: 100%; /* Responsive width */
-            max-width: 300px; /* Maximum width */
+            width: 100%;
+            max-width: 300px;
             margin: 20px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-            cursor: pointer; /* Show pointer cursor for images */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
         }
 
         .game {
-            display: inline-block; /* Allow margin and padding */
+            display: inline-block;
             margin: 20px;
             padding: 20px;
             font-weight: bolder;
@@ -57,81 +65,139 @@
             cursor: pointer;
             border-radius: 20px;
             border: none;
-            background-color: #34495E; /* Darker button color */
-            color: #ECF0F1; /* Light button text */
-            transition: transform 0.2s, background-color 0.3s; /* Animation effects */
-            text-decoration: none; /* Remove underline */
+            background-color: #34495E;
+            color: #ECF0F1;
+            transition: transform 0.2s, background-color 0.3s;
+            text-decoration: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
         .game:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            background-color: #2C3E50; /* Darker background on hover */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+            transform: translateY(-5px);
+            background-color: #2C3E50;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
 
         a {
-            color: #ECF0F1; /* Light color for links */
+            color: #ECF0F1;
             text-decoration: none;
         }
 
         h2 {
-            font-size: 40px; /* Font size for game titles */
+            font-size: 40px;
             margin: 20px 0;
-            color: #ECF0F1; /* Light color for game titles */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for titles */
-            transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+            color: #ECF0F1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s, transform 0.3s;
         }
 
         h2:hover {
-            color: #F39C12; /* Change color on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+            color: #F39C12;
+            transform: translateY(-2px);
         }
 
         .credit {
-            margin-top: 50px; /* Space above credit */
-            padding: 15px; /* Padding for the credit box */
-            border-radius: 10px; /* Rounded corners */
-            background-color: rgba(52, 73, 94, 0.8); /* Semi-transparent dark background */
-            color: #ECF0F1; /* Light color for credit */
-            font-size: 24px; /* Slightly larger font for credit */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for text */
+            margin-top: 50px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(52, 73, 94, 0.8);
+            color: #ECF0F1;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         img {
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for all images */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         img:hover {
-            transform: scale(1.1); /* Slightly scale all images on hover */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow effect to all images */
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .main {
+                font-size: 40px;
+            }
+
+            .logo {
+                width: 80px;
+            }
+
+            .pic {
+                max-width: 200px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .credit {
+                font-size: 20px;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                font-size: 30px;
+            }
+
+            .logo {
+                width: 60px;
+            }
+
+            .pic {
+                max-width: 150px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .credit {
+                font-size: 18px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <a href="./CRAZY LASSI .png" target="_blank">
-        <img src="./CRAZY LASSI .png" alt="Logo" class="logo"> <!-- Add the logo image here -->
-    </a>
-    <p class="main">Crazy Lassi Hub</p>
-    <hr>
+    <div class="navbar">
+        <!-- Logo on the left -->
+        <a href="./CRAZY LASSI.png" target="_blank">
+            <img src="./CRAZY LASSI .png" alt="Logo" class="logo">
+        </a>
+        <!-- Main title aligned to the right -->
+        <p class="main">Crazy Lassi Hub</p>
+    </div>
 
     <div class="container">
-        <h2>Num Game</h2>
+        <h2>Numeron_Game_1</h2>
         <a href="https://numgame-vansh.netlify.app/" target="_blank">
             <img src="game1.jpg" alt="Num Game" class="pic">
         </a>
     </div>
 
     <div class="container">
+        <h2>Numeron_Game_2</h2>
+        <a href="https://numerongame15.netlify.app/" target="_blank">
+            <img src="./numeron_game-2.jpg" alt="Tic Tac Toe Game" class="pic">
+        </a>
+    </div>
+
+    <div class="container">
         <h2>Tic Tac Toe Game</h2>
         <a href="https://tictactoe-vansh.netlify.app/" target="_blank">
-            <img src="./game2.webp" alt="Tic Tac Toe Game" class="pic"> <!-- Replace with the actual image path -->
+            <img src="./game2.webp" alt="Tic Tac Toe Game" class="pic">
         </a>
     </div>
 
     <div class="credit">
-        <p>Thanks to Anany 😘!</p>
+        <p>Thanks to Anany & Ayush.G 😘!</p>
     </div>
 </body>
 </html>
