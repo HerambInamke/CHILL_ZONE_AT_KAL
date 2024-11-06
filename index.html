@@ -5,15 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalvium Chill Zone -_-</title>
     <style>
+         /* Responsive Layout */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+        /* Adjust layout for tablets and smaller screens */
+        .container {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Adjust for mobile devices */
+        .container {
+            padding: 5px;
+        }
+        .content {
+            font-size: 14px; /* Slightly smaller font size on mobile */
+        }
+    }
         /* Updated background with pitch black and lighter orange gradient */
         body {
-            background: linear-gradient(135deg, #000000, #FFB347); /* Black to lighter orange gradient */
-            color: #ECF0F1;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+    background: linear-gradient(135deg, #000000, #A9A9A9); /* Black to metallic grey gradient */
+    color: #ECF0F1;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 
         /* Navbar styling */
         .navbar {
@@ -25,7 +50,7 @@
 
         /* Logo styling */
         .logo {
-            width: 100px;
+            width: 200px;
             height: auto;
         }
 
@@ -168,8 +193,8 @@
 <body>
     <div class="navbar">
         <!-- Logo on the left -->
-        <a href="./CRAZY LASSI.png" target="_blank">
-            <img src="./CRAZY LASSI .png" alt="Logo" class="logo">
+        <a href="./CRAZY LASSI .png" target="_blank">
+            <img src="./CRAZY LASSI .png" alt="Crazy LASSI Hub" class="logo">
         </a>
         <!-- Main title aligned to the right -->
         <p class="main">Crazy Lassi Hub</p>
@@ -178,26 +203,33 @@
     <div class="container">
         <h2>Numeron_Game_1</h2>
         <a href="https://numgame-vansh.netlify.app/" target="_blank">
-            <img src="game1.jpg" alt="Num Game" class="pic">
+            <img src="./assets/game1.jpg" alt="Num Game" class="pic">
         </a>
     </div>
 
     <div class="container">
         <h2>Numeron_Game_2</h2>
         <a href="https://numerongame15.netlify.app/" target="_blank">
-            <img src="./numeron_game-2.jpg" alt="Tic Tac Toe Game" class="pic">
+            <img src="./assets/numeron_game-2.jpg" alt="Tic Tac Toe Game" class="pic">
         </a>
     </div>
 
     <div class="container">
         <h2>Tic Tac Toe Game</h2>
         <a href="https://tictactoe-vansh.netlify.app/" target="_blank">
-            <img src="./game2.webp" alt="Tic Tac Toe Game" class="pic">
+            <img src="./assets/game2.webp" alt="Tic Tac Toe Game" class="pic">
+        </a>
+    </div>
+
+    <div class="container">
+        <h2>Rock-Paper-scissor</h2>
+        <a href="https://paperock15.netlify.app/" target="_blank">
+            <img src="./assets/rock paper scssior 2.jpg" alt="Rock-Paper-scissor" class="pic">
         </a>
     </div>
 
     <div class="credit">
-        <p>Thanks to Anany & Ayush.G 😘!</p>
+        <p>Thanks to Anany 😘!</p>
     </div>
 </body>
 </html>
